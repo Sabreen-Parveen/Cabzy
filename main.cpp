@@ -4,6 +4,7 @@
 #include<conio.h>//Header File
 #include<cctype>//Header File
 #include<windows.h>//Header File
+#include"map.h"
 using namespace std;
 void CheckBookingRecord();//Function Prototype
 ofstream MYFILE;
@@ -23,8 +24,8 @@ int main()
    cout<<endl;
    cout<<"\t******************************\n"; 
    cout<<"\t*             WelCome           *\n";
-      cout<<"\t*            To              *\n"; 
-      cout<<"\t*          Cabzy     *\n";
+      cout<<"\t*             To              *\n"; 
+      cout<<"\t*           Cabzy             *\n";
       cout<<"\t******************************\n";
    cout<<endl;
    cout<<endl;
@@ -166,22 +167,6 @@ do{
                                  }//end of case 2                              
                                  case 3:
                                  {
-          //cab Status
-                                    system("CLS");
-         int size=6;
-         cout<<"CAB STATUS\n";
-         for(int i=1;i<size;i++)
-         {
-                                         if(CABSTATUS[i] ==1)
-                                         {
-                                              cout<<"Cab "<<NumberOfCab[i]<<" IS FREE\n";
-                                         }
-                                         else
-                                         {
-                                             cout<<"Cab "<<NumberOfCab[i]<<" IS NOT FREE\n";
-                                         }
-                                         
-         }
                                     break;  
                                  }
          case 4:
@@ -291,13 +276,7 @@ do{
  cout<<endl;
     cout<<"<1> Booking"<<endl;
  cout<<endl;
- cout<<"<2> cab Status    "<<endl;
- cout<<endl;
- cout<<"<3> Customer Record    "<<endl;
- cout<<endl;
- cout<<"<4> Update Cab Status    "<<endl;
- cout<<endl;
- cout<<"<5> To LogOut         "<<endl;
+ cout<<"<2> To LogOut         "<<endl;
     cout<<endl;
  
  cout<<"Select :";
@@ -309,7 +288,7 @@ do{
                        {
            
                   //*************************************************************************
-                  //*                       BoOkInG                                         *
+                  //*                             Booking                                   *
                   //*************************************************************************
          
          do{
@@ -318,12 +297,10 @@ do{
                   char Wish;
                   string Choice;
                cout<<"\t********************"<<endl;
-               cout<<"\t*    Booking        *"<<endl;
+               cout<<"\t*     Booking      *"<<endl;
                cout<<"\t********************"<<endl;
                cout<<endl;
-                  
-               cin>>Choice;
-                  int choice = atoi( Choice.c_str() );//converting string to int
+               booking();
                   
     
        cout<<"Do you want to continue...... ";
@@ -331,12 +308,8 @@ do{
          }while(Wish);
                         
                           break;
-                      }
-                      case 4:
-                           {
-                            break;    
-                           }                         
-                     case 5:
+                      }                        
+                     case 2:
                          {
                              system("CLS");
                              cout<<"\tFor Logout\n";
@@ -348,7 +321,7 @@ do{
         break;
        }
     }//end of switch
-                 if(choice==5)
+                 if(choice==2)
      {
       break;
      }
