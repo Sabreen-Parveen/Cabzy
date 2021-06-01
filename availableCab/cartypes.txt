@@ -1,0 +1,4 @@
+mini
+luxury
+taxi
+auto
