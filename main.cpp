@@ -14,6 +14,15 @@ string AdminName="admin";
 string AdminPassword="admin";
 
 bool wrong = false;//initializing
+
+void confirmBooking() {
+      int bookCab = booking();
+      if (bookCab == 0)
+      {
+            cout<<"Booking Confirmed";
+      }    
+}
+
 int main()
 {
 //************************************************************************************
@@ -301,6 +310,9 @@ do{
                cout<<"\t********************"<<endl;
                cout<<endl;
                booking();
+               
+               cout<<"Do you want to confirm your booking";
+               confirmBooking();
                   
     
        cout<<"Do you want to continue...... ";
